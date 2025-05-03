@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Produto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .tabs {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-weight: 600;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    .tab.active {
+      border-bottom: 3px solid #0078d4;
+      color: #0078d4;
+    }
+    .tab i {
+      color: inherit;
+      transition: color 0.3s;
+    }
+    .tab-content {
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #505050;
+    }
+    .form-value {
+      background: #f1f3f4;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #2d2d2d;
+    }
+    .icon {
+      font-size: 12px;
+      color: #605e5c;
+    }
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", sans-serif;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .styled-table thead {
+      background-color: #57c1b2;
+      color: white;
+      text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    .styled-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('identificacao')"><i class="fas fa-id-badge icon"></i>Identificação</button>
+    <button class="tab" onclick="showTab('escopo')"><i class="fas fa-list icon"></i>Escopo</button>
+    <button class="tab" onclick="showTab('estrategia')"><i class="fas fa-bullseye icon"></i>Estratégia</button>
+    <button class="tab" onclick="showTab('qualificacao')"><i class="fas fa-check-circle icon"></i>Qualificação</button>
+  </div>
+
+  <div id="identificacao" class="tab-content active">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-box icon"></i>Nome do Produto</label>
+      <div class="form-value">Recuperação de Tributos - PIS / COFINS (Revisão de Insumos, Exclusão do ICMS e Gross Up)      
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-align-left icon"></i>Descrição do Produto</label>
+      <p class="form-value">
+        Revisa os insumos e calcula corretamente os créditos de PIS e COFINS, aplicando teses como a exclusão do ICMS da base e o Gross Up, para recuperar valores pagos a mais e melhorar a eficiência tributária da empresa.
+      </p>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-barcode icon"></i>Código</label>
+      <div class="form-value">TAX005</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-sitemap icon"></i>Área</label>
+      <div class="form-value">Gestão Tributária</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-cow icon"></i>Classificação BCG</label>
+      <div class="form-value">Vaca Leiteira</div>
+    </div>
+    </div>
+
+  </div>
+
+  <div id="escopo" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-file-alt icon"></i>Escopo</label>
+      <div class="form-value">
+        <ol data-start="152" data-end="833">
+          <li data-start="152" data-end="282" class="">
+          <p data-start="155" data-end="282" class=""><strong data-start="155" data-end="189">Diagnóstico Tributário Inicial</strong><br data-start="189" data-end="192">
+          Identificamos oportunidades reais de recuperação com base no regime e setor da empresa.</p>
+          </li>
+          <li data-start="284" data-end="383" class="">
+          <p data-start="287" data-end="383" class=""><strong data-start="287" data-end="312">Mapeamento de Insumos</strong><br data-start="312" data-end="315">
+          Classificamos insumos essenciais que geram crédito de PIS/COFINS.</p>
+          </li>
+          <li data-start="385" data-end="483" class="">
+          <p data-start="388" data-end="483" class=""><strong data-start="388" data-end="408">Exclusão do ICMS</strong><br data-start="408" data-end="411">
+          Aplicamos a tese do STF para recalcular tributos pagos indevidamente.</p>
+          </li>
+          <li data-start="485" data-end="598" class="">
+          <p data-start="488" data-end="598" class=""><strong data-start="488" data-end="512">Cálculo com Gross Up</strong><br data-start="512" data-end="515">
+          Ajustamos os valores para maximizar o crédito com base no tributo sobre tributo.</p>
+          </li>
+          <li data-start="600" data-end="715" class="">
+          <p data-start="603" data-end="715" class=""><strong data-start="603" data-end="632">Consolidação dos Créditos</strong><br data-start="632" data-end="635">
+          Organizamos os valores com relatórios prontos para fiscalização e uso seguro.</p>
+          </li>
+          <li data-start="717" data-end="833" class="">
+          <p data-start="720" data-end="833" class=""><strong data-start="720" data-end="737">Entrega Final</strong><br data-start="737" data-end="740">
+          Relatórios prontos para compensação via PER/DCOMP ou uso contábil, sem suporte recorrente.</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-list-check icon"></i>Problemas que Resolve
+      </label>
+      <div class="form-value">
+        <ol data-start="100" data-end="466">
+          <li data-start="100" data-end="165" class="">
+          <p data-start="103" data-end="165" class="">ICMS indevidamente incluído na base de cálculo do PIS/COFINS</p>
+          </li>
+          <li data-start="166" data-end="228" class="">
+          <p data-start="169" data-end="228" class="">Créditos de insumos não aproveitados ou mal classificados</p>
+          </li>
+          <li data-start="229" data-end="288" class="">
+          <p data-start="232" data-end="288" class="">Ausência do Gross Up, reduzindo o valor da recuperação</p>
+          </li>
+          <li data-start="289" data-end="347" class="">
+          <p data-start="292" data-end="347" class="">Escrituração fiscal com erros ou omissões recorrentes</p>
+          </li>
+          <li data-start="348" data-end="407" class="">
+          <p data-start="351" data-end="407" class="">Falta de atualização quanto à jurisprudência favorável</p>
+          </li>
+          <li data-start="408" data-end="466" class="">
+          <p data-start="411" data-end="466" class="">Perda de créditos por falta de documentação dos insumos</p>
+          </li>
+          </ol>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="	fas fa-trophy icon"></i>Benefícios
+      </label>
+      <div class="form-value">
+        <ol data-start="108" data-end="582">
+          <li data-start="108" data-end="200" class="">
+          <p data-start="111" data-end="200" class="">Recuperação de valores pagos a maior nas apurações de PIS/COFINS dos últimos cinco anos</p>
+          </li>
+          <li data-start="201" data-end="287" class="">
+          <p data-start="204" data-end="287" class="">Aumento da lucratividade com a restituição ou compensação de créditos tributários</p>
+          </li>
+          <li data-start="288" data-end="383" class="">
+          <p data-start="291" data-end="383" class="">Redução da carga tributária futura por meio da correta exclusão do ICMS da base de cálculo</p>
+          </li>
+          <li data-start="384" data-end="476" class="">
+          <p data-start="387" data-end="476" class="">Aprimoramento do aproveitamento de créditos com revisão e inclusão de insumos elegíveis</p>
+          </li>
+          <li data-start="477" data-end="582" class="">
+          <p data-start="480" data-end="582" class="">Segurança fiscal e conformidade com a legislação vigente, respaldada por parecer técnico especializado</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+  </div>
+
+  <div id="estrategia" class="tab-content">
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-fire icon"></i>Prioridade de Venda</label>
+        <div class="form-value">Alta</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-lightbulb icon"></i>Quando Ofertar</label>
+      <div class="form-value">
+        
+        <ol data-start="97" data-end="433">
+          <li data-start="97" data-end="160" class="">
+          <p data-start="100" data-end="160" class="">Empresa no lucro real com alta carga de insumos tributados</p>
+          </li>
+          <li data-start="161" data-end="230" class="">
+          <p data-start="164" data-end="230" class="">Margens operacionais apertadas e necessidade de ganho financeiro</p>
+          </li>
+          <li data-start="231" data-end="294" class="">
+          <p data-start="234" data-end="294" class="">Presença de ICMS incluído na base de cálculo do PIS/COFINS</p>
+          </li>
+          <li data-start="295" data-end="365" class="">
+          <p data-start="298" data-end="365" class="">Pós-fiscalização ou autuação recente envolvendo tributos federais</p>
+          </li>
+          <li data-start="366" data-end="433" class="">
+          <p data-start="369" data-end="433" class="">Avaliação financeira para captação de recursos ou reestruturação</p>
+          </li>
+          </ol>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-gem icon"></i>Proposta de Valor</label>
+      <div class="form-value">A Recuperação de Tributos - PIS/COFINS, com foco na Revisão de Insumos, Exclusão do ICMS da base de cálculo e análise do Gross Up, representa uma ação estratégica para empresas que desejam fortalecer sua saúde financeira e garantir conformidade fiscal. Por meio de uma análise técnica minuciosa, nossa equipe identifica créditos não aproveitados e corrige distorções que comprometem o resultado. O grande diferencial está na profundidade da investigação fiscal, que respeita a jurisprudência vigente e maximiza o retorno financeiro com segurança e precisão. Um serviço que transforma passivos ocultos em ativos de valor.
+
+
+
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-shopping-basket icon"></i>Cross-selling</label>
+      <div class="form-value">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Produto Complementar</th>
+              <th>Justificativa da Conexão</th>
+              <th>Área Responsável</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exclusão do PIS e COFINS da própria base de cálculo</td>
+              <td>É a tese que fundamenta parte da recuperação do Gross Up. Complementa tecnicamente e pode ser judicial ou administrativa.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Exclusão do Crédito Presumido de ICMS da base do IRPJ e CSLL</td>
+              <td>Extensão natural para aumentar o benefício fiscal. Estratégia avançada que fortalece o relacionamento com clientes maduros.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Consultoria em LGPD</td>
+              <td>Clientes que revisam tributos demonstram preocupação com conformidade. LGPD traz outra camada de proteção e evita sanções.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Diagnóstico Empresarial</td>
+              <td>Ideal para captar clientes com pouca clareza sobre seus gargalos — ponto de entrada para sugerir recuperação e outros ajustes.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>Compliance Trabalhista e Previdenciária</td>
+              <td>Depois de resolver tributos indiretos, muitos clientes passam a se preocupar com riscos trabalhistas. Excelente via de continuidade.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+            <tr>
+              <td>BPO Contábil e Tributário - Indústria e Comércio</td>
+              <td>Clientes que fazem recuperação de créditos costumam ter falhas na escrituração. O BPO ajuda a garantir que não cometam os mesmos erros.</td>
+              <td>Contabilidade</td>
+            </tr>
+            <tr>
+              <td>Parametrização Contábil/Tributária no Sistema Operacional</td>
+              <td>Alinha o ERP às regras fiscais e evita erros futuros na apropriação de créditos. Muito comum após a entrega de uma recuperação.</td>
+              <td>Contabilidade</td>
+            </tr>
+            <tr>
+              <td>Auditoria de Obrigações Acessórias</td>
+              <td>Verifica se os créditos estão sendo corretamente declarados. É um serviço técnico que protege o resultado da recuperação feita.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>BI - Implantação Sistema Atua</td>
+              <td>Com a organização fiscal e contábil iniciada, BI entra como aliado estratégico na tomada de decisão e visualização dos resultados.</td>
+              <td>BI</td>
+            </tr>
+            <tr>
+              <td>Planejamento Sucessório e Patrimonial (Holding e Administradora de Bens)</td>
+              <td>Em empresas familiares que organizam tributos, frequentemente surgem conversas sobre sucessão. Cross-sell sofisticado e estratégico.</td>
+              <td>Jurídico</td>
+            </tr>
+            <tr>
+              <td>Recuperação de Tributos - IRPJ/CSLL</td>
+              <td>Expansão direta da recuperação de tributos para impostos diretos. Pode vir em nova fase da consultoria.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Exclusão do ICMS ST da base de cálculo de PIS e COFINS</td>
+              <td>Complementa a recuperação de PIS/COFINS tradicional com tese adicional ainda pouco explorada por muitas empresas.</td>
+              <td>Gestão Tributária</td>
+            </tr>
+            <tr>
+              <td>Consultoria Trabalhista e Previdenciária (contínua)</td>
+              <td>Consolida a regularização em uma relação de médio/longo prazo com foco em compliance geral.</td>
+              <td>Consultoria Empresarial</td>
+            </tr>
+          </tbody>
+        </table>
+        
+            
+
+      </div>
+    </div>
+  </div>
+
+  <div id="qualificacao" class="tab-content">
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-briefcase icon"></i>Regime Tributário Atendimento</label>
+      <div class="form-value">Lucro Real e Lucro Presumido</div>
+    </div>
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-sync-alt icon"></i>Tipo de Cobrança</label>
+        <div class="form-value">Êxito</div>
+      </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-globe icon"></i>Abrangência Geográfica</label>
+      <div class="form-value">Nacional</div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class=" fas fa-file-invoice-dollar icon"></i>Faturamento Ideal</label>
+        <div class="form-value">Indiferente </div>
+      </div>
+
+    <div class="form-group">
+        <label class="form-label"><i class="fas fa-paperclip icon"></i>Documentos Solicitados</label>
+        <div class="form-value">
+          <ol data-start="112" data-end="231">
+            <li data-start="112" data-end="152" class="">
+            <p data-start="115" data-end="152" class="">SPED EFD-Contribuições (PIS/COFINS)</p>
+            </li>
+            <li data-start="153" data-end="175" class="">
+            <p data-start="156" data-end="175" class="">SPED EFD-ICMS/IPI</p>
+            </li>
+            <li data-start="176" data-end="214" class="">
+            <p data-start="179" data-end="214" class="">Notas Fiscais (Entradas e Saídas)</p>
+            </li>
+            <li data-start="215" data-end="231" class="">
+            <p data-start="218" data-end="231" class="">DCTFs e DARFs</p>
+            </li>
+            </ol>
+                </div>
+        
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Setores ICP</label>
+                <div class="form-value">Transporte, Indústria, Comércio. </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class="fas fa-exclamation-circle icon"></i>Objeções Mapeadas</label>
+                <div class="form-value">
+                  <table class="styled-table">
+                    <thead>
+                      <tr>
+                        <th>Objeção</th>
+                        <th>O que o cliente quer dizer</th>
+                        <th>Como contornar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>“Isso vai dar problema com a Receita depois, né?”</td>
+                        <td>Medo de autuação. Quer segurança.</td>
+                        <td>“Trabalhamos com base em decisões firmes do STJ e critérios da Receita. Tudo é documentado e defensável.”</td>
+                      </tr>
+                      <tr>
+                        <td>“Meu contador já faz isso...”</td>
+                        <td>Acha que já está resolvido.</td>
+                        <td>“Esse trabalho é complementar. O contador apura, a gente revisa tecnicamente o que pode ser recuperado com base em jurisprudência e especificidade setorial.”</td>
+                      </tr>
+                      <tr>
+                        <td>“Se der errado, vou ter que devolver com multa.”</td>
+                        <td>Avesso a riscos retroativos.</td>
+                        <td>“Só indicamos créditos com respaldo técnico. Preferimos ser conservadores a expor sua empresa.”</td>
+                      </tr>
+                      <tr>
+                        <td>“Vale a pena mesmo? Quanto eu ganho?”</td>
+                        <td>Busca retorno claro.</td>
+                        <td>“Fazemos um diagnóstico prévio gratuito com estimativa. Você decide se avança. Modelo 100% por êxito.”</td>
+                      </tr>
+                      <tr>
+                        <td>“Já fiz com outra consultoria, foi ruim.”</td>
+                        <td>Trauma anterior.</td>
+                        <td>“Transparência total: entregamos escopo, prazos e critérios antes. Temos histórico sólido de entregas seguras.”</td>
+                      </tr>
+                      <tr>
+                        <td>“Agora não é o momento.”</td>
+                        <td>Sem tempo ou foco.</td>
+                        <td>“Exige esforço mínimo da sua equipe. Enquanto você toca o core, a gente gera caixa com o que está parado.”</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  
+                  
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class=" fas fa-industry icon"></i>Personas</label>
+                <div class="form-value">
+                    <ul data-start="107" data-end="257">
+                        <li data-start="107" data-end="173" class="" style="">
+                        <p data-start="109" data-end="173" class=""><strong data-start="109" data-end="129">Influenciadores:</strong> Consultor, Controller, Gerente Financeiro</p>
+                        </li>
+                        <li data-start="174" data-end="257" class="" style="">
+                        <p data-start="176" data-end="257" class=""><strong data-start="176" data-end="190">Decisores:</strong> CFO, Proprietários, Sócios</p>
+                        </li>
+                        </ul> </div>
+              </div>
+    <div class="form-group">
+      <label class="form-label"><i class="fas fa-star-half-alt icon"></i>Diferenciais</label>
+      <div class="form-value">A Funcional se destaca por atuar com precisão técnica e segurança jurídica em cada etapa da recuperação de créditos de PIS e COFINS. Ao contrário de soluções automatizadas ou genéricas, nossa equipe realiza uma análise detalhada da cadeia de insumos, considerando jurisprudência atualizada, critérios do STJ e particularidades operacionais da empresa.
+
+        Trabalhamos com memória de cálculo robusta, documentação de suporte e parecer técnico que garantem respaldo em caso de questionamento fiscal. Nossas entregas incluem também avaliação dos riscos e simulações com e sem Gross Up, para que o cliente tome decisões embasadas e com previsibilidade.
+        
+        Mais do que apurar valores, conectamos o crédito à estratégia do negócio, promovendo economia sustentável e aderente à legislação.</div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
